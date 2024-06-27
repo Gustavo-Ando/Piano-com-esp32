@@ -11,7 +11,6 @@ void setup() {
   for(int i = 0; i < keys; i++){
     pinMode(keyPin[keys], INPUT);
   }
-  //pinMode(buzzer, OUTPUT);
 
  ledcAttach(buzzer, 44100, 8);
   // Frequency * 2^resoultion < 80Mhz
@@ -25,9 +24,6 @@ void loop() {
   float height = 0;
   for(int i = 0; i < keys; i++){
     keyVoltage[i] = analogRead(keyPin[i]);
-    //Serial.print(i);
-    //Serial.print(": ");
-    //Serial.println(keyVoltage[i]);
     if(keyVoltage[i] < threshold) {
       height += sin(220.0 * pow(2.0, i/12.0) * 6.2831855 * time / 1000000.0);
   
@@ -39,11 +35,4 @@ void loop() {
 
   int duty = height * 255.0;
   ledcWrite(buzzer, duty);
-  //Serial.println(duty);
-  //if(anyPlaying == 0) noTone(buzzer);
-
 }
-
-// [TODO]
-// poliphonia
-// ADSR (?)

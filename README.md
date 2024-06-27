@@ -14,11 +14,13 @@ Então criam-se ondas de seno correspondentes a cada frequência, tomando-se com
 Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento para produzir-se o som. Como a ESP32 não consegue produzir voltagens analógicas (entre 0 e 3.3V) para que essa informação seja transferido aos speakers, usamos uma aproximação através de modulação por largura de pulso, ou seja, geramos uma onda quadrada de frequência superior ao limiar da audição humana (acima de 20KHz) e alteramos sua razão cíclica (o período em que a onda fica ativa) para simular diferentes voltagens, visto que em média, a voltagem será igual a porcentagem do tempo que a onda está ativa e o valor máximo (3.3V).
 
 ## Materiais
-R$ 40.00 Breadboard
-R$0.07 (x20) Resistor 10M ohm 1/4W
-R$7.00 (x2) Jumpers Macho-femea
-R$ 15.00 (x0.5) Jumper Macho-macho (Valor dividido com outro grupo)
-R$ 9.00 Buzzer
+|Valores| Componentes|
+|-------|------------|
+|R$ 40.00| Breadboard|
+|R$0.07 (x20)| Resistor 10M ohm 1/4W|
+|R$7.00 (x2)| Jumpers Macho-femea|
+|R$ 15.00 (x0.5)| Jumper Macho-macho (Valor dividido com outro grupo)|
+|R$ 9.00| Buzzer|
 + Materiais emprestados do professor
 
 ## Vídeo

@@ -21,16 +21,18 @@ Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento pa
 |R$7.00 (x2)| Jumpers Macho-femea|
 |R$ 15.00 (x0.5)| Jumper Macho-macho (Valor dividido com outro grupo)|
 |R$ 9.00| Buzzer|
-+ Materiais emprestados do professor
+|Grátis |Materiais emprestados do professor|
 
 ## Vídeo
 Upload do vídeo
 
 ## Alunos participantes
-Caio Capocasali - 12541733
-Driely Fernanda Oliveira de Abreu - 11879575
-Gustavo Alvares Andó - 15457345
-Maria Clara de Souza Capato - 15475294
+|Nomes|Nº USP|
+|-----|------|
+|Caio Capocasali | 12541733|
+|Driely Fernanda Oliveira de Abreu | 11879575|
+|Gustavo Alvares Andó | 15457345|
+|Maria Clara de Souza Capato | 15475294|
 
 
 

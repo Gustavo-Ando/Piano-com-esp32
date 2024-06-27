@@ -13,6 +13,15 @@ Para gerar as ondas sonoras, a ESP32 identifica quais pin estão com uma voltage
 
 Então criam-se ondas de seno correspondentes a cada frequência, tomando-se como referência A4 = 440HZ e usando o temperamento igual de 12 tons, consideramos a razão de um semitom como sendo $2^{1/12}$, para que as 12 notas sejam igualmente espaçadas dentro de uma oitava com razão 2.
 
+```cpp
+for(int i = 0; i < keys; i++){
+  keyVoltage[i] = analogRead(keyPin[i]);
+  if(keyVoltage[i] < threshold) {
+    height += sin(220.0 * pow(2.0, i/12.0) * 6.2831855 * time / 1000000.0);
+  }
+}
+```
+
 Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento para produzir-se o som. Como a ESP32 não consegue produzir voltagens analógicas (entre 0 e 3.3V) para que essa informação seja transferido aos speakers, usamos uma aproximação através de modulação por largura de pulso, ou seja, geramos uma onda quadrada de frequência superior ao limiar da audição humana (acima de 20KHz) e alteramos sua razão cíclica (o período em que a onda fica ativa) para simular diferentes voltagens, visto que em média, a voltagem será igual a porcentagem do tempo que a onda está ativa e o valor máximo (3.3V).
 
 ## Materiais

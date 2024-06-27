@@ -1,12 +1,9 @@
 # Piano com ESP32
 ## Funcionamento
 
-Falstad: https://tinyurl.com/2j6gxfdj
+[Falstad](https://tinyurl.com/2j6gxfdj) (Modelo simplificado do piano)
 
 ![unnamed](https://github.com/Gustavo-Ando/Piano-com-esp32/assets/174065922/b7291a3e-eb44-44ad-bcd1-662a1aa75948)
-
-(Modelo simplificado do piano)
-
 
 O piano foi montado em uma protoboard, a qual foi alimentada pelo positivo e negativo da ESP32 através de jumpers macho-fêmea. Cada tecla do piano foi conectada à placa por esses jumpers nas entradas analógicas, totalizando 12 teclas (1 oitava). A saída foi inicialmente feita através de um buzzer, o qual foi eventualmente substituído por uma alto falante piezoeletronico.
 
@@ -29,7 +26,8 @@ Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento pa
 |Grátis |Materiais emprestados do professor|
 
 ## Vídeo
-Upload do vídeo
+
+https://github.com/Gustavo-Ando/Piano-com-esp32/assets/163079804/b126ed6b-4f8a-4dc9-96e9-458e650c600c
 
 ## Alunos participantes
 |Nomes|Nº USP|

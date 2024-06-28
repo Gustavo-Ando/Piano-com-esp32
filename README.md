@@ -27,11 +27,11 @@ Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento pa
 ## Materiais
 |Valores| Componentes|
 |-------|------------|
-|R$ 40.00| Breadboard|
+|R$ 39.10| Breadboard|
 |R$0.07 (x20)| Resistor 10M ohm 1/4W|
 |R$7.00 (x2)| Jumpers Macho-femea|
 |R$ 15.00 (x0.5)| Jumper Macho-macho (Valor dividido com outro grupo)|
-|R$ 9.00| Buzzer|
+|R$ 9.50| Buzzer|
 |Grátis |Materiais emprestados do professor|
 
 ## Vídeo

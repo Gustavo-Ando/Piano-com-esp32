@@ -22,6 +22,24 @@ for(int i = 0; i < keys; i++){
 }
 ```
 
+Além disso, usamos um envelope (ADSR) para modular o volume da nota ao longo de sua duração, com um tempo de ataque até o pico da nota após ser pressionada, um tempo de decaimento para que a nota chegue a um valor estável (o sustain) e um tempo de liberar para que o som termine. O valor desse envelope então é multiplicado pelo resultado do seno antes de se somar ao height.
+
+```cpp
+  if(!released){
+    if(time < attack){
+      return time/ (float) attack;
+    } else if(time < attack + decay){
+      float k = (sustain - 1.0)/decay;
+      return k * time + sustain - (decay + attack) * k;
+    } else {
+      return sustain;
+    }
+  } else {
+    if(time < release) return sustain - sustain * time/ (float) release;
+    else return 0;
+  }
+```
+
 Com isso, somamos as ondas para obtermos a pressão do ar desejado no momento para produzir-se o som. Como a ESP32 não consegue produzir voltagens analógicas (entre 0 e 3.3V) para que essa informação seja transferido aos speakers, usamos uma aproximação através de modulação por largura de pulso, ou seja, geramos uma onda quadrada de frequência superior ao limiar da audição humana (acima de 20KHz) e alteramos sua razão cíclica (o período em que a onda fica ativa) para simular diferentes voltagens, visto que em média, a voltagem será igual a porcentagem do tempo que a onda está ativa e o valor máximo (3.3V).
 
 ## Materiais
@@ -46,5 +64,7 @@ https://github.com/Gustavo-Ando/Piano-com-esp32/assets/163079804/b126ed6b-4f8a-4
 |Gustavo Alvares Andó | 15457345|
 |Maria Clara de Souza Capato | 15475294|
 
+## Referências
 
-
+Inspiração: [Manual do Mundo](https://youtu.be/gTU9NunYVnM?si=pZbLGN4s4YTZFQD2)
+Pinout: [Circuit State](https://circuitstate.com/wp-content/uploads/2022/12/ESP32-DevKit-V1-Pinout-Diagram-r0.1-CIRCUITSTATE-Electronics-2.png)
